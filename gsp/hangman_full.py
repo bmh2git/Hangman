@@ -2,7 +2,7 @@
 __author__ = 'quark'
 
 import random
-words = ['chicken','dog', 'cat', 'mouse', 'frog']
+words = ['Chicken','Dog', 'Cat', 'Mouse', 'Frog']
 lives_remaining = 14
 guessed_letters = ''
 
@@ -31,7 +31,7 @@ def get_guess( word ):
 def print_word_with_blanks( word ):
     display_word = ''
     for letter in word:
-        if guessed_letters.find( letter ) > -1:
+        if guessed_letters.lower().find( letter.lower() ) > -1:
             # letter found
             display_word = display_word + letter
         else:
@@ -47,7 +47,7 @@ def process_guess( guess, word ):
 
 def whole_word_guess( guess, word):
     global lives_remaining
-    if guess == word:
+    if guess.lower() == word.lower():
         return True
     else:
         lives_remaining = lives_remaining -1
@@ -56,7 +56,7 @@ def whole_word_guess( guess, word):
 def single_letter_guess( guess, word ):
     global guessed_letters
     global lives_remaining
-    if word.find( guess ) == -1:
+    if word.lower().find( guess.lower() ) == -1:
         # letter guess was incorrect
         lives_remaining = lives_remaining - 1
     guessed_letters = guessed_letters + guess
@@ -65,8 +65,8 @@ def single_letter_guess( guess, word ):
     return False
 
 def all_letters_guessed( word ):
-    for letter in word:
-        if guessed_letters.find( letter ) == -1:
+    for letter in word.lower():
+        if guessed_letters.lower().find( letter ) == -1:
             return False
     return True
 
