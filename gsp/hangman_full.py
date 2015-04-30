@@ -14,8 +14,9 @@ def play():
             print('You win!  Well Done!')
             break
         if lives_remaining == 0 :
-            print('You are Hung!!')
+            print('\nYou are Hung!!')
             print('The word was: ' + word )
+            print('\n')
             break
 
 def pick_a_word():
