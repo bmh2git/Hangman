@@ -45,6 +45,7 @@
         			<version>2.5.4</version>
 				<configuration>
           				<descriptor>assembly.xml</descriptor>
+					<appendAssemblyId>false</appendAssemblyId>
         			</configuration>
         			<executions>
           				<execution>
@@ -63,6 +64,7 @@
 		<connection>scm:git:https://github.com/bmh2git/Hangman.git</connection>
 		<developerConnection>scm:git:https://github.com/bmh2git/Hangman.git</developerConnection>
 	</scm>
+<!--
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
@@ -73,4 +75,5 @@
 			<url>http://10.92.216.12:8081/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
+-->
 </project>
